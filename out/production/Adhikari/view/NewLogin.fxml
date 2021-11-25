@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="mainRoot" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewLoginController">
+    <children>
+        <ImageView fitHeight="815.0" fitWidth="445.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/Capture1.PNG"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="815.0" fitWidth="479.0" layoutX="375.0" opacity="0.65" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../asset/Capture1.PNG"/>
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="txtUserName" focusColor="WHITE" labelFloat="true" layoutX="444.0" layoutY="330.0"
+                      onKeyPressed="#usernameEnter" prefHeight="28.0" prefWidth="247.0"
+                      promptText="Input your user name :" style="-fx-font: #ffffff;" unFocusColor="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" layoutX="444.0" layoutY="383.0"
+                          onKeyPressed="#passwordEnter" prefHeight="28.0" prefWidth="247.0"
+                          promptText="Input your password :" style="-fx-font: white;" unFocusColor="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXTextField fx:id="txtNewUserName" focusColor="WHITE" labelFloat="true" layoutX="69.0" layoutY="311.0"
+                      onKeyPressed="#newUsernameEnter" prefHeight="28.0" prefWidth="247.0"
+                      promptText="Input your user name :" style="-fx-font: #ffffff;" unFocusColor="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="txtNewPassword" focusColor="WHITE" labelFloat="true" layoutX="67.0" layoutY="364.0"
+                          onKeyPressed="#newPasswordEnter" prefHeight="28.0" prefWidth="247.0"
+                          promptText="Input your password :" style="-fx-font: white;" unFocusColor="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXPasswordField fx:id="txtConfirmPass" focusColor="WHITE" labelFloat="true" layoutX="67.0" layoutY="416.0"
+                          onKeyPressed="#ComfirmPassEnter" prefHeight="28.0" prefWidth="247.0"
+                          promptText="Confirm password :" style="-fx-font: white;" unFocusColor="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXButton id="signUp" layoutX="439.0" layoutY="447.0" onAction="#signUp" prefHeight="31.0" prefWidth="81.0"
+                   text="Sign Up" underline="true">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXButton>
+        <JFXButton id="signIn" buttonType="RAISED" layoutX="65.0" layoutY="542.0" onAction="#signInAgain"
+                   prefHeight="25.0" prefWidth="252.0" text="Sign In" textFill="#1b1b1b" underline="true">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </JFXButton>
+        <JFXButton id="signIn" fx:id="btnLogin" layoutX="483.0" layoutY="509.0" onAction="#loginOnAction"
+                   prefHeight="32.0" prefWidth="143.0" style="-fx-background-color: #34495e;" text="Login In"
+                   textAlignment="CENTER" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+                <Font name="FreeSerif Bold" size="17.0"/>
+            </font>
+        </JFXButton>
+        <Label layoutX="568.0" layoutY="451.0" onMouseClicked="#forgetPassword" text="Forget PassWord" underline="true">
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Label>
+        <JFXButton id="signUp" buttonType="RAISED" layoutX="116.0" layoutY="486.0"
+                   onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="32.0"
+                   prefWidth="143.0" style="-fx-background-color: #34495e;" text="Sign Up" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+                <Font name="FreeSerif Bold" size="16.0"/>
+            </font>
+        </JFXButton>
+        <VBox fx:id="root" prefHeight="815.0" prefWidth="375.0">
+            <children>
+                <Pane prefHeight="848.0" prefWidth="375.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="262.0" fitWidth="321.0" layoutX="54.0" layoutY="221.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../asset/DeepinScreenshot_select-area_20201014110023.png"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="145.0" layoutY="502.0" text="Login" textFill="#34495e">
+                            <font>
+                                <Font name="FreeSerif Bold" size="35.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="773.0" text="Copyright 2020  - Shehan Dilusanka"
+                               textFill="#281f1f">
+                            <font>
+                                <Font name="FreeSerif Bold" size="15.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+        <VBox fx:id="root1" layoutX="375.0" layoutY="-3.0" prefHeight="815.0" prefWidth="375.0">
+            <children>
+                <Pane prefHeight="826.0" prefWidth="375.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="60.0" layoutY="775.0" text="Copyright 2020  - Shehan Dilusanka"
+                               textFill="#281f1f">
+                            <font>
+                                <Font name="FreeSerif Bold" size="15.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="121.0" layoutY="506.0" text="Sign In" textFill="#34495e">
+                            <font>
+                                <Font name="FreeSerif Bold" size="35.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="321.0" fitWidth="267.0" layoutX="49.0" layoutY="226.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../asset/DeepinScreenshot_select-area_20201014110023.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

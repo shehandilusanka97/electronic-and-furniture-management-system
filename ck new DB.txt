@@ -1,0 +1,131 @@
+drop database myProject;
+create database myProject;
+use myProject;
+
+create table Employee(
+EmpId varchar(255),
+EmpName varchar(255) not null,
+Address varchar(255) not null,
+ContactNo int not null,
+constraint primary key(EmpId),
+constraint unique(Address,ContactNo)
+)engine=InnoDB;
+
+INSERT INTO Employee VALUES('E001','Nimal','Mabodala',0765431234);
+INSERT INTO Employee VALUES('E002','Sunil','Naiwala',0712331234);
+INSERT INTO Employee VALUES('E003','Amal','Nugegoda',0712431287);
+INSERT INTO Employee VALUES('E004','Amara','Malabe',0725431098);
+
+create table Customer(
+CId varchar(50),
+CName varchar(255) not null,
+Address varchar(255) not null,
+ContactNo int not null,
+constraint primary key(CId),
+constraint unique(Address,ContactNo)
+)engine=InnoDB;
+
+INSERT INTO Customer VALUES('C001','Kamal','Gampaha',0765434687);
+INSERT INTO Customer VALUES('C002','Amarapala','Gampola',0775434667);
+INSERT INTO Customer VALUES('C003','Kamal','Kadawatha',0725934123);
+INSERT INTO Customer VALUES('C004','Kasun','Nawala',0789786595);
+
+
+create table Supplier(
+SId varchar(255),
+SName varchar(255) not null,
+ContactNo int not null,
+Email varchar(255) not null,
+constraint primary key(SId),
+constraint unique(ContactNo,Email)
+)engine=InnoDB;
+
+INSERT INTO Supplier VALUES('S001','Anil',0765434681,'anilsantha@gmail.com');
+INSERT INTO Supplier VALUES('S002','Sunul',0775434661,'sunilsantha@gmail.com');
+INSERT INTO Supplier VALUES('S003','Pasan',0725934121,'pasansaf@yahoo.com');
+INSERT INTO Supplier VALUES('S004','Sunimal',0789786395,'sunimal@outlook.com');
+
+Create table Orders(
+OrderId varchar(50),
+OrderDate DATE,
+CId varchar(50) not null,
+constraint primary key(OrderId),
+constraint foreign key(CId) references Customer (CId) 
+on delete cascade on update cascade
+)engine=InnoDB;
+
+create table Repairs(
+RepairId varchar(50),
+CId varchar(255) not null,
+ItemName varchar(255) not null,
+Description varchar(255) not null,
+RepairDate DATE,
+constraint primary key(RepairId),
+constraint foreign key(CId) references Customer (CId) 
+on delete cascade on update cascade
+)engine=InnoDB;
+
+
+create table Item(
+ItemCode varchar(50),
+IName varchar(255) not null,
+IType varchar (200) not Null,
+QtyOnHand int not null,
+UnitPrice decimal(10,2),
+constraint primary key(ItemCode),
+constraint unique(IName)
+)engine=InnoDB;
+
+Create table ItemSupplier(
+ItemCode varchar(50),
+SId varchar(50),
+Qty int not null,
+UnitPrice decimal(10,2) not null,
+constraint primary key(ItemCode,SId),
+constraint foreign key(ItemCode) references Item (ItemCode) 
+on delete cascade on update cascade,
+constraint foreign key(SId) references Supplier (SId) 
+on delete cascade on update cascade
+)engine=InnoDB;
+
+create table OrderDetail(
+ItemCode varchar(50),
+OrderId varchar(50),
+Qty int not null,
+Discount int(2),
+constraint primary key(ItemCode,OrderId),
+constraint foreign key(ItemCode) references Item (ItemCode) 
+on delete cascade on update cascade,
+constraint foreign key(OrderId) references Orders (OrderId) 
+on delete cascade on update cascade
+)engine=InnoDB;
+
+
+Create table CustomerReturn(
+ReturnId varchar(50),
+OrderId varchar(50) not null,
+ItemCode varchar(50) not null,
+ReturnDate DATE,
+Reason varchar(500) not null,
+constraint primary key(ReturnId),
+constraint foreign key(ItemCode) references Item (ItemCode) 
+on delete cascade on update cascade,
+constraint foreign key(OrderId) references Orders (OrderId) 
+on delete cascade on update cascade
+)engine=InnoDB;
+
+Create table Login(
+UserName varchar(200),
+Password varchar(200) not null,
+Roll varchar(200) not null,
+constraint primary key(UserName)
+)engine=InnoDB;
+
+Insert into Login Values('shopkeeper','1234','User');
+Insert into Login Values('admin','1234','Admin');
+
+
+
+
+
+

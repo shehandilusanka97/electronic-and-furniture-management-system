@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="840.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShopKeeperFormController">
+    <children>
+        <ImageView fitHeight="840.0" fitWidth="1087.0" layoutY="113.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/furniture-barber-shop-sao-paulo-flooring.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="378.0" layoutY="39.0" text="Adikari Muli - Palace" textFill="#e74c3c">
+            <font>
+                <Font name="FreeSerif Bold" size="36.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imgCustomer" fitHeight="203.0" fitWidth="220.0" layoutX="307.0" layoutY="208.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/gender-neutral-user(3).png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgFurniture" fitHeight="220.0" fitWidth="203.0" layoutX="625.0" layoutY="219.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/a8d878a5b926584c04160ccc800fe3a8-drawers-cabinet-round-icon-by-vexels.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgRepair" fitHeight="163.0" fitWidth="158.0" layoutX="330.0" layoutY="457.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/unnamed.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgOrder" fitHeight="150.0" fitWidth="158.0" layoutX="633.0" layoutY="461.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/icon-for-purchase-68423-free-icons-library-purchase-png-295_286.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="20.0" layoutY="690.0" prefHeight="16.0" prefWidth="1063.0" />
+        <Label fx:id="lblMenu" layoutX="480.0" layoutY="719.0" text="Welcome" textFill="#ffdada">
+            <font>
+                <Font name="FreeSerif Bold" size="39.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDescription" layoutX="238.0" layoutY="761.0" text="Please select one of above main operations to proceed" textFill="#ffb9b9">
+            <font>
+                <Font name="FreeSerif Bold" size="27.0" />
+            </font>
+        </Label>
+        <Label layoutX="439.0" layoutY="806.0" text="Copyright 2020  - Shehan Dilusanka" textFill="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="15.0" />
+            </font>
+        </Label>
+        <Separator layoutX="14.0" layoutY="111.0" prefHeight="16.0" prefWidth="1063.0" />
+        <JFXButton fx:id="btnLogOut" layoutX="911.0" layoutY="647.0" onAction="#btnLogOut_OnAction" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: #9b59b6;" text="Log Out" textFill="#fff6f6">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>

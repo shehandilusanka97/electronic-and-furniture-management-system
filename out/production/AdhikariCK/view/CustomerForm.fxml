@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="840.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+    <children>
+        <ImageView fitHeight="840.0" fitWidth="1087.0" layoutX="-2.0" layoutY="145.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/ss-target-customer.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="420.0" layoutY="61.0" text="Customer Form" textFill="#e74c3c">
+            <font>
+                <Font name="FreeSerif Bold" size="31.0" />
+            </font>
+        </Label>
+        <Label layoutX="132.0" layoutY="220.0" text="Customer ID :">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="112.0" layoutY="273.0" text="Customer Name :">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="171.0" layoutY="323.0" text="Address :">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="146.0" layoutY="377.0" text="Contact No :">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="254.0" layoutY="217.0" onAction="#txtCustomerIdOnAction" prefHeight="32.0" prefWidth="322.0" unFocusColor="#4059a9">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="254.0" layoutY="268.0" onKeyPressed="#txtNameEnter" prefHeight="32.0" prefWidth="621.0" unFocusColor="#4059a9">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="254.0" layoutY="317.0" onKeyPressed="#txtAddressEnter" prefHeight="32.0" prefWidth="621.0" unFocusColor="#4059a9">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="254.0" layoutY="366.0" onKeyPressed="#txtContactNoEnter" prefHeight="32.0" prefWidth="621.0" unFocusColor="#4059a9">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton fx:id="btnSave" layoutX="299.0" layoutY="448.0" onAction="#onAction_btnSave" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #3498db;" text="Save" textFill="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnDelete" layoutX="502.0" layoutY="448.0" onAction="#onAction_btnDelete" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #f11b1b;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXButton>
+        <TableView fx:id="tblCustomer" layoutX="45.0" layoutY="516.0" prefHeight="308.0" prefWidth="990.0">
+            <columns>
+                <TableColumn fx:id="clmCustomerId" prefWidth="126.0" text="CustomerId" />
+                <TableColumn fx:id="clmCustomerName" prefWidth="292.0" text="CustomerName" />
+                <TableColumn fx:id="clmAddress" prefWidth="343.0" text="Address" />
+                <TableColumn fx:id="clmContactNo" prefWidth="228.0" text="ContactNo" />
+            </columns>
+        </TableView>
+        <JFXButton fx:id="btnAddNewCustomer" layoutX="32.0" layoutY="163.0" onAction="#onAction_AddNewCustomer" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #9b59b6;" text="+Add New " textFill="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXButton>
+        <Separator layoutX="7.0" layoutY="133.0" prefHeight="6.0" prefWidth="1071.0" style="-fx-background-color: black;" />
+        <JFXButton fx:id="btnBack" layoutX="882.0" layoutY="166.0" onAction="#onAction_btnBack" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #2ecc71;" text="&lt; Back" textFill="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="17.0" />
+            </font>
+        </JFXButton>
+      <JFXButton fx:id="btnReport" layoutX="697.0" layoutY="448.0" onAction="#onAction_btnReport" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #2c3e50;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="FreeSerif Bold" size="17.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>
